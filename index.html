@@ -2,39 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Advait Saxena</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advait Saxena | Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+
+  <div class="background-shape shape-1"></div>
+  <div class="background-shape shape-2"></div>
+
   <div class="container">
-    <img src="photo.jpeg" alt="Advait Saxena" class="profile-pic">
+    <div class="profile-header">
+      <div class="img-wrapper">
+        <img src="photo.jpg" alt="Advait Saxena" class="profile-pic">
+      </div>
+      <h1>Advait Saxena</h1>
+      <p class="subtitle">BTech CSE (FinTech) Student <span class="divider">|</span> MIT Manipal</p>
+      
+      <div class="social-links">
+        <a href="mailto:advait.jsr@gmail.com" class="btn btn-icon"><i class="fas fa-envelope"></i> Email</a>
+        <a href="https://github.com/AdvaitZeroSix" target="_blank" class="btn btn-icon"><i class="fab fa-github"></i> GitHub</a>
+      </div>
+    </div>
 
-    <h1>Advait Saxena</h1>
-    <p class="subtitle">BTech CSE (FinTech) Student</p>
+    <div class="content-grid">
+      <section class="card about">
+        <h2><i class="fas fa-user"></i> About Me</h2>
+        <p>
+          I am a BTech student specializing in <strong>Financial Technology</strong> at MIT Manipal. 
+          Passionate about bridging the gap between complex financial systems and modern software engineering. 
+          I love technology-driven problem solving and building efficient, scalable applications.
+        </p>
+      </section>
 
-    <section>
-      <h2>About Me</h2>
-      <p>
-        I am a BTech student at MIT Manipal studying Computer Science and Engineering
-        with a specialization in Financial Technology. I am interested in software
-        development, finance, and technology-driven problem solving.
-      </p>
-    </section>
-
-    <section>
-      <h2>Education</h2>
-      <ul>
-        <li>BTech CSE (FinTech) – MIT Manipal</li>
-        <li>Higher Secondary – CBSE</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Contact</h2>
-      <p>Email: advait.jsr@gmail.com</p>
-      <p>GitHub: github.com/AdvaitZeroSix</p>
-    </section>
+      <section class="card education">
+        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+        <ul class="timeline">
+          <li>
+            <span class="date">Present</span>
+            <strong>BTech CSE (FinTech)</strong>
+            <p>Manipal Institute of Technology</p>
+          </li>
+          <li>
+            <span class="date">Completed</span>
+            <strong>Higher Secondary</strong>
+            <p>CBSE Board</p>
+          </li>
+        </ul>
+      </section>
+      
+      <section class="card skills">
+        <h2><i class="fas fa-code"></i> Skills</h2>
+        <div class="skill-tags">
+          <span>Python</span>
+          <span>Java</span>
+          <span>FinTech</span>
+          <span>Web Dev</span>
+        </div>
+      </section>
+    </div>
+    
+    <footer>
+      <p>&copy; 2024 Advait Saxena. Built with code & coffee.</p>
+    </footer>
   </div>
 </body>
 </html>
+
 
