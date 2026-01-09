@@ -11,8 +11,18 @@
 
   <div class="background-shape shape-1"></div>
   <div class="background-shape shape-2"></div>
+  <div class="background-shape shape-3"></div>
 
   <div class="container">
+    
+    <div class="birthday-badge">
+      <i class="fas fa-birthday-cake"></i>
+      <div>
+        <span class="bday-label">Next Birthday</span>
+        <span id="bday-counter" class="bday-count">Loading...</span>
+      </div>
+    </div>
+
     <div class="profile-header">
       <div class="img-wrapper">
         <img src="photo.jpeg" alt="Advait Saxena" class="profile-pic">
@@ -27,48 +37,103 @@
     </div>
 
     <div class="content-grid">
+      
       <section class="card about">
-        <h2><i class="fas fa-user"></i> About Me</h2>
+        <h2><i class="fas fa-user-astronaut"></i> My Journey</h2>
         <p>
-          I am a BTech student specializing in <strong>Financial Technology</strong> at MIT Manipal. 
-          Passionate about bridging the gap between complex financial systems and modern software engineering. 
-          I love technology-driven problem solving and building efficient, scalable applications.
+          I am a <strong>BTech CSE (FinTech)</strong> student at MIT Manipal. 
+          Originally born in <strong>Jamshedpur, Jharkhand</strong> (Oct 23, 2006), my journey took me to <strong>Faridabad</strong> for my schooling.
+        </p>
+        <p>
+          Currently, my family resides in <strong>Noida</strong>, while I pursue my engineering degree in Manipal. 
+          I am relatively new to programming but highly curious. I am building my foundation in <strong>Java, Python, and C</strong> while exploring Web Development.
         </p>
       </section>
 
       <section class="card education">
-        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+        <h2><i class="fas fa-graduation-cap"></i> Education Timeline</h2>
         <ul class="timeline">
+          
           <li>
             <span class="date">Present</span>
-            <strong>BTech CSE (FinTech)</strong>
-            <p>Manipal Institute of Technology</p>
+            <strong>Manipal Institute of Technology</strong>
+            <p>BTech CSE (FinTech) | Manipal, Karnataka</p>
+            <div class="score-badge">1st Sem GPA: 8.27</div>
           </li>
+
           <li>
-            <span class="date">Completed</span>
-            <strong>Higher Secondary</strong>
-            <p>CBSE Board</p>
+            <span class="date">Class 11 - 12</span>
+            <strong>Modern Delhi International School</strong>
+            <p>Sector 87, Faridabad</p>
+            <div class="score-badge">12th Boards: 88%</div>
+            <div class="score-badge secondary">JEE Main: 90.2%ile</div>
           </li>
+
+          <li>
+            <span class="date">Class 7 - 10</span>
+            <strong>Grand Columbus International School</strong>
+            <p>Faridabad</p>
+            <div class="score-badge">10th Boards: 93%</div>
+          </li>
+
+          <li>
+            <span class="date">Kindergarten - Class 6</span>
+            <strong>Xavier School</strong>
+            <p>Gamharia, Jamshedpur</p>
+          </li>
+
         </ul>
       </section>
       
       <section class="card skills">
-        <h2><i class="fas fa-code"></i> Skills</h2>
+        <h2><i class="fas fa-laptop-code"></i> Learning Status</h2>
+        <p class="skill-intro">Currently Studying:</p>
         <div class="skill-tags">
           <span>Python</span>
           <span>Java</span>
-          <span>C</span>
-          <span>Web Dev</span>
+          <span>C Language</span>
+          <span>HTML/CSS</span>
+          <span>Web Basics</span>
         </div>
       </section>
     </div>
     
     <footer>
-      <p>&copy; 2024 Advait Saxena. Built with code & coffee.</p>
+      <p>&copy; 2026 Advait Saxena. From Jamshedpur to Manipal.</p>
     </footer>
   </div>
+
+  <script>
+    function updateBirthdayCounter() {
+      const now = new Date();
+      const currentYear = now.getFullYear();
+      const birthMonth = 9; // October is month 9 (0-indexed)
+      const birthDate = 23;
+      
+      // Create date object for next birthday
+      let nextBirthday = new Date(currentYear, birthMonth, birthDate);
+      
+      // If birthday has passed this year, set to next year
+      if (now > nextBirthday) {
+        nextBirthday.setFullYear(currentYear + 1);
+      }
+      
+      // Calculate difference in time
+      const diffTime = nextBirthday - now;
+      // Calculate difference in days (Time / (1000 * 60 * 60 * 24))
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      
+      const counterElement = document.getElementById('bday-counter');
+      
+      if (diffDays === 0) {
+        counterElement.innerHTML = "Today! 🎉";
+      } else {
+        counterElement.innerHTML = diffDays + " Days to go";
+      }
+    }
+
+    // Run immediately
+    updateBirthdayCounter();
+  </script>
 </body>
 </html>
-
-
-
