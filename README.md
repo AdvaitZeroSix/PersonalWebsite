@@ -1,2 +1,2 @@
-# PersonalWebsite
-Trying to make a personal website just for fun
+# PersonalWebpage
+Trying to make a personal webpage just for fun
